@@ -205,7 +205,8 @@ class PdfReportGenerator {
         this.doc.font('Helvetica').fontSize(8).fillColor(this.colors.darkText);
 
         products.forEach((product, index) => {
-            if (currentY > 720) {
+            // Aumentei de 760 para 780 para usar ainda mais a página
+            if (currentY > 780) {
                 this.doc.addPage();
                 currentY = 80;
             }
@@ -343,22 +344,23 @@ class PdfReportGenerator {
         for (let i = 0; i < pages.count; i++) {
             this.doc.switchToPage(i);
             
-            // Linha no rodapé
+            // Linha no rodapé (bem mais embaixo - Y=810)
             this.doc
                 .strokeColor(this.colors.accent)
                 .lineWidth(2)
-                .moveTo(50, 770)
-                .lineTo(545, 770)
+                .moveTo(50, 810)
+                .lineTo(545, 810)
                 .stroke();
 
+            // Texto do rodapé (Y=815)
             this.doc
-                .fontSize(8)
+                .fontSize(7)
                 .font('Helvetica')
                 .fillColor(this.colors.darkText)
                 .text(
-                    `Pagina ${i + 1} de ${pages.count}`,
+                    `Pagina ${i + 1} de ${pages.count} - v1.1`,
                     50,
-                    775,
+                    815,
                     { align: 'center' }
                 );
         }

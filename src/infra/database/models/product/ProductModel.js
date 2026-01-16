@@ -33,8 +33,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         giver_name: {
-            type: DataTypes.STRING,
-            allowNull: false
+            type: DataTypes.STRING
         },
         payers_list: {
             type: DataTypes.ARRAY(
