@@ -1,0 +1,32 @@
+const Enum = require('../../domain/enum/Enum');
+
+module.exports = Enum({
+    FORBIDDEN: 'forbidden_error',
+    REQUIRED: 'required_field_error',
+    EMPTY: 'empty_field_error',
+    EMAIL: 'email_error',
+    BASE: 'typing_error',
+    ISO_DATE: 'date_error',
+    NULL_ERROR: 'null_field_error',
+    MIN: 'min_value_error',
+    MIN_LENGTH: 'min_length_error',
+    MAX: 'max_value_error',
+    MAX_LENGTH: 'max_length_error',
+    BETWEEN: 'between_value_error',
+    GUID: 'guid_error',
+    ONLY: 'enum_field_error',
+    VALID: 'valid_error',
+    XOR: 'xor_error',
+    EMPTY_XOR: 'empty_error',
+    ALTERNATIVES: 'alternatives_error',
+    POSITIVE: 'positive_number_error',
+    INTEGER: 'integer_number_error',
+    GREATER_THAN: 'greater_than_error',
+    LETTERS_AND_CHARACTERS: 'letters_and_characters_error',
+    SPECIAL_CHARACTERS:'special_characters_error',
+    INVALID_DATE: 'invalid_date',
+    DEPENDENCY_ERROR: 'dependency_error',
+    URI_ERROR: 'invalid_uri_error',
+    ALPHANUM_ERROR: 'alphanum_error',
+    CUSTOM: 'custom_error'
+});
