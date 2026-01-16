@@ -1,14 +1,11 @@
 const joi = require('@hapi/joi');
 
-
-
 const generateReportBodySchema = {
     body: joi.object().keys({
-        start_date: joi.string().max(5).example('2026-01-11').trim().options({ convert: true }),
-        end_date: joi.string().max(5).example('2026-02-15').trim().options({ convert: true })
+        start_date: joi.string().trim().options({ convert: true }).example('2026-08-15').required(),
+        end_date: joi.string().trim().options({ convert: true }).example('2026-08-17'),
     })
 };
-
 
 module.exports = () => ({
     generateReportBodySchema,

@@ -60,7 +60,7 @@ const createProductBodySchema = {
         price: joi.number().integer().options({ convert: true }).example(100),
         description: joi.string().trim().options({ convert: true }).example('parcela de novembro da escola'),
         start_date: joi.string().trim().options({ convert: true }).example('2026-08-15').required(),
-        end_date: joi.string().trim().options({ convert: true }).example('2026-08-17').required(),
+        end_date: joi.string().trim().options({ convert: true }).example('2026-08-17'),
         type: joi.string().trim().options({ convert: true }).valid(...EnumProductType.values()).example(EnumProductType.PRODUCT),
         giver_name: joi.string().trim().options({ convert: true }).example('Joazinho'),
     })
