@@ -3,7 +3,7 @@ const DateValidator = require('../../../infra/suppport/DateValidator');
 const EnumRamosType = require('../../../domain/enum/EnumRamosType');
 const EnumPaymentStatus = require('../../../domain/enum/EnumPaymentStatus');
 const CPF_REGEX = /^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$/;
-const RG_REGEX = /^(\d{1,2}\.?\d{3}\.?\d{3}-?\d{1}|\d{7,9})$/;
+const RG_REGEX = /^(?:\d{7,9}|\d{1,2}\.?\d{3}\.?\d{3}-?\d)$/;
 
 const createStudentBodySchema = {
     body: joi.object().keys({
