@@ -15,12 +15,12 @@ module.exports = ({ container }) => {
 
         {
             method: 'patch',
-            path: '/products/payments/list',
+            path: '/products/:product_id/payments/list',
             middlewares: [],
             tags: ['products'],
             validation: {
                 body: productSchema.updateStudentPaymentList.body,
-                headers: productSchema.updateProductsHeaderSchema.headers
+                params: productSchema.getProductByIdParamsSchema.params
             },
             handler: productController.addPaymentList
         },

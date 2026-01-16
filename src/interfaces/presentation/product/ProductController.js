@@ -42,7 +42,7 @@ module.exports = () => ({
     
     addPaymentList: AsyncMiddleware(async (ctx) => {
         const { addPaymentListOperation, httpConstants } = ctx.container.cradle;
-        const { product_id } = ctx.headers;
+        const { product_id } = ctx.params;
         const { body: transactionData } = ctx;
 
         const productRetrieved = await addPaymentListOperation.execute(transactionData, product_id);
